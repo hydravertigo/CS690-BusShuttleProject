@@ -8,7 +8,8 @@ public class FileSaverTests
     string testFileName;
 
 
-    public FileSaverTests() {
+    public FileSaverTests()
+    {
         testFileName = "test-doc.txt";
         fileSaver = new FileSaver(testFileName);
     }
@@ -31,12 +32,12 @@ public class FileSaverTests
         Loop sampleLoop = new Loop("MyLoop");
         Driver sampleDriver = new Driver("Sample");
 
-        PassengerData sampleData = new PassengerData(5,sampleStop,sampleLoop,sampleDriver);
+        PassengerData sampleData = new PassengerData(5, sampleStop, sampleLoop, sampleDriver);
 
         fileSaver.AppendData(sampleData);
         var contentFromFile = File.ReadAllText(testFileName);
         Assert.Equal("Sample:MyLoop:MyStop:5" + Environment.NewLine, contentFromFile);
 
 
-    }   
+    }
 }
