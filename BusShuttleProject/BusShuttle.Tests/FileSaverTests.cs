@@ -36,7 +36,6 @@ public class FileSaverTests
         Stop sampleStop = new Stop("MyStop");
         Loop sampleLoop = new Loop("MyLoop");
         Driver sampleDriver = new Driver("Sample");
-
         PassengerData sampleData = new PassengerData(5, sampleStop, sampleLoop, sampleDriver);
 
         fileSaver.AppendData(sampleData);
